@@ -37,44 +37,47 @@ const ButtonDocs = require('../components/button/DOCS.md');
 //   ),
 // });
 
-// storiesOf('Custom Preview and Footer', module)
-//   .addDecorator(withKnobs)
-//   .addDecorator(withDocsCustom(ButtonDocs))
-//   .add('Button', () => (
-//     <Button
-//       onClick={action('clicked')}
-//       alert={boolean('alert', false)}
-//       success={boolean('success', false)}
-//       label={text('label', 'Hello Im Button')}
-//     />
-//   ));
+storiesOf('Custom Preview and Footer', module)
+  .addDecorator(withKnobs)
+  // .addDecorator(withDocsCustom(ButtonDocs))
+  .add('Button', () => ({
+    component: ButtonComponent,
+    props: {
+      click: action('clicked'),
+      alert: boolean('alert', false),
+      success: boolean('success', false),
+      label: text('label', 'Hello Im Button')
+    }
+  }));
 
-// storiesOf('With Docs and Readme', module)
-//   .addDecorator(withKnobs)
-//   .addDecorator(withDocs(ButtonDocs))
-//   .addDecorator(withReadme(ButtonReadme))
-//   .add('Button', () => (
-//     <Button
-//       onClick={action('clicked')}
-//       alert={boolean('alert', false)}
-//       success={boolean('success', false)}
-//       label={text('label', 'Hello Im Button')}
-//     />
-//   ));
+storiesOf('With Docs and Readme', module)
+  .addDecorator(withKnobs)
+  .addDecorator(withDocs(ButtonDocs))
+  .addDecorator(withReadme(ButtonReadme))
+  .add('Button', () => ({
+    component: ButtonComponent,
+    props: {
+      click: action('clicked'),
+      alert: boolean('alert', false),
+      success: boolean('success', false),
+      label: text('label', 'Hello Im Button')
+    }
+  }));
 
-// // withReadme and withDocs
-// storiesOf('withDocs and withReadme', module)
-//   .addDecorator(withKnobs)
-//   .addDecorator(withDocs(ButtonDocs))
-//   .addDecorator(withReadme(ButtonReadme))
-//   .add('Button', () => (
-//     <Button
-//       onClick={action('clicked')}
-//       alert={boolean('alert', false)}
-//       success={boolean('success', false)}
-//       label={text('label', 'Hello Im Button')}
-//     />
-//   ));
+// withReadme and withDocs
+storiesOf('withDocs and withReadme', module)
+  .addDecorator(withKnobs)
+  .addDecorator(withDocs(ButtonDocs))
+  .addDecorator(withReadme(ButtonReadme))
+  .add('Button', () => ({
+    component: ButtonComponent,
+    props: {
+      click: action('clicked'),
+      alert: boolean('alert', false),
+      success: boolean('success', false),
+      label: text('label', 'Hello Im Button')
+    }
+  }));
 
 // withDocs
 storiesOf('withReadme/ As Decorator', module)
@@ -102,31 +105,33 @@ storiesOf('withReadme/As HOC', module)
     }
   })));
 
-// // with docs
-// storiesOf('withDocs/As Decorator', module)
-//   .addDecorator(withKnobs)
-//   .addDecorator(withDocs(ButtonReadme))
-//   .add('Button', () => (
-//     <Button
-//       onClick={action('clicked')}
-//       alert={boolean('alert', false)}
-//       success={boolean('success', false)}
-//       label={text('label', 'Hello Im Button')}
-//     />
-//   ));
+// with docs
+storiesOf('withDocs/As Decorator', module)
+  .addDecorator(withKnobs)
+  .addDecorator(withDocs(ButtonReadme))
+  .add('Button', () => ({
+    component: ButtonComponent,
+    props: {
+      click: action('clicked'),
+      alert: boolean('alert', false),
+      success: boolean('success', false),
+      label: text('label', 'Hello Im Button')
+    }
+  }));
 
-// storiesOf('withDocs/As HOC', module)
-//   .addDecorator(withKnobs)
-//   .add(
-//     'Button',
-//     withDocs(ButtonReadme, () => (
-//       <Button
-//         onClick={action('clicked')}
-//         alert={boolean('alert', false)}
-//         success={boolean('success', false)}
-//         label={text('label', 'Hello Im Button')}
-//       />
-//     ))
-//   );
+storiesOf('withDocs/As HOC', module)
+  .addDecorator(withKnobs)
+  .add(
+    'Button',
+    withDocs(ButtonReadme, () => ({
+      component: ButtonComponent,
+      props: {
+        click: action('clicked'),
+        alert: boolean('alert', false),
+        success: boolean('success', false),
+        label: text('label', 'Hello Im Button')
+      }
+    }))
+  );
 
 // storiesOf('Doc', module).add('Common', doc(ButtonReadme));

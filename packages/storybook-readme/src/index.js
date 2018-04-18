@@ -4,6 +4,8 @@ import isArray from 'lodash/isArray';
 
 import vueHandler from './env/vue';
 import reactHandler from './env/react';
+import angularHandler from './env/angular';
+
 import normalizeDocs from './services/normalizeDocs';
 import './styles/github-markdown-css';
 
@@ -15,6 +17,9 @@ switch (window.STORYBOOK_ENV) {
     break;
   case 'react':
     handler = reactHandler;
+    break;
+  case 'angular':
+    handler = angularHandler;
     break;
   default:
     handler = reactHandler;

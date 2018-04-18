@@ -15,7 +15,7 @@ const withDocsCustom = withDocs({
   PreviewComponent: ({ children }) => (
     <div
       style={{
-        textAlign: 'center',
+        textAlign: 'left',
         padding: '25px',
         margin: '25px 0',
         boxShadow: '0 0 40px rgba(0, 0, 0, 0.1)',
