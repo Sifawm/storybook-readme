@@ -9,8 +9,7 @@ const template = (content) => `
     <div #highlight style="padding: 10px">
         <div *ngFor="let doc of storyReadme.docs.docsBeforePreview"
             class="markdown-body"
-            [innerHTML]="doc">
-        </div>
+            [innerHTML]="doc"></div>
 
         <story-readme-preview>
             ${ content }
@@ -18,11 +17,12 @@ const template = (content) => `
 
         <div *ngFor="let doc of storyReadme.docs.docsAfterPreview"
             class="markdown-body"
-            [innerHTML]="doc">
-        </div>
+            [innerHTML]="doc"></div>
 
         <story-readme-footer *ngIf="storyReadme.config.docsAtFooter">
-            holas
+            <div
+                class="markdown-body"
+                [innerHTML]="storyReadme.config.docsAtFooter"></div>
         </story-readme-footer>
     </div>
 `

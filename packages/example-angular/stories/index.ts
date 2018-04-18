@@ -9,7 +9,7 @@ const CommonFooterDocs = require('../components/COMMON_FOOTER.md');
 const ButtonReadme = require('../components/button/README.md');
 const ButtonDocs = require('../components/button/DOCS.md');
 
-// withDocs.addFooterDocs(CommonFooterDocs);
+withDocs.addFooterDocs(CommonFooterDocs);
 
 // const withDocsCustom = withDocs({
 //   PreviewComponent: ({ children }) => (
