@@ -17,6 +17,7 @@
   "scripts": {
     "storybook-react": "npm run storybook --prefix ./packages/example-react",
     "storybook-vue": "npm run storybook --prefix ./packages/example-vue",
+    "storybook-angular": "npm run storybook --prefix ./packages/example-angular",
     "dev": "lerna run dev --stream --parallel",
     "clear": "lerna run clear",
     "deploy-storybook": "npm run deploy-storybook --prefix ./packages/example-react",
